@@ -1,0 +1,12 @@
+[Unit]
+Description=Периодический запуск мониторинга веб-приложения
+
+[Timer]
+# Через сколько после старта системы первый запуск
+OnBootSec=10
+# Периодичность запусков (N секунд) — можно изменить по заданию
+OnUnitActiveSec=30
+Unit=helloapp-monitor.service
+
+[Install]
+WantedBy=timers.target
