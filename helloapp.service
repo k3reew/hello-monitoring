@@ -1,0 +1,17 @@
+[Unit]
+Description=Простое веб-приложение Hello World
+After=network.target
+
+[Service]
+Type=simple
+# Каталог, где лежит app.py
+WorkingDirectory=/opt/hello_monitoring
+ExecStart=/usr/bin/env python3 /opt/hello_monitoring/app.py
+Restart=always
+RestartSec=5
+
+# Не обязательно, но можно указать пользователя
+# User=www-data
+
+[Install]
+WantedBy=multi-user.target
