@@ -1,0 +1,7 @@
+[Unit]
+Description=Мониторинг веб-приложения Hello World
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/hello_monitoring
+ExecStart=/usr/bin/env python3 /opt/hello_monitoring/monitor.py
